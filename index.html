@@ -28,7 +28,7 @@
       <a href="services.html">Services</a>
       <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
-      <a class="btn nav__cta" href="contact.html">Discuter de votre projet</a>
+      <a class="btn btn--accent nav__cta" href="contact.html">Discuter de votre projet</a>
     </nav>
     <button class="nav__burger" id="burger" aria-label="Menu"><span></span></button>
   </div>
@@ -42,17 +42,25 @@
       <h1 class="display">L'ingénierie et le conseil qui valorisent et sécurisent votre patrimoine bâti.</h1>
       <p class="lead">VEDITECH accompagne foncières, entreprises et industriels — de la définition du besoin à la réception des travaux. Une double compétence&nbsp;: expertise technique pointue et conseil stratégique en maîtrise d'ouvrage.</p>
       <div class="btn-row">
-        <a class="btn" href="contact.html">Discuter de votre projet <span class="ar">→</span></a>
+        <a class="btn btn--accent" href="contact.html">Discuter de votre projet <span class="ar">→</span></a>
         <a class="btn btn--ghost" href="services.html">Découvrir nos missions</a>
       </div>
-      <ul class="trust">
-        <li><strong>25 ans</strong><span>d'expérience terrain</span></li>
-        <li><strong>Ancien expert judiciaire</strong><span>près le TGI d'Amiens</span></li>
-        <li><strong>Accredited Tier Designer</strong><span>Uptime Institute · data center</span></li>
-        <li><strong>Hauts-de-France<br>& Île-de-France</strong><span>zone d'intervention</span></li>
-      </ul>
     </div>
     <div class="hero__media reveal in">
+      <ul class="stats">
+        <li>
+          <span class="stats__num"><span class="counter" data-target="500" data-suffix="+">0</span></span>
+          <span class="stats__label">projets réalisés</span>
+        </li>
+        <li>
+          <span class="stats__num"><span class="counter" data-target="25">0</span></span>
+          <span class="stats__label">années d'expérience</span>
+        </li>
+        <li>
+          <span class="stats__num stats__num--text">Ancien<br>expert judiciaire</span>
+          <span class="stats__label">TGI Amiens</span>
+        </li>
+      </ul>
       <div class="ph hero__img">
         <div class="ph__crosshair"></div>
         <span class="ph__tag">// photo — immeuble tertiaire / chantier</span>
@@ -75,6 +83,10 @@
       <li>Industrie &amp; production</li><li class="sep">/</li>
       <li>Logement</li><li class="sep">/</li>
       <li>Énergie</li>
+    </ul>
+    <ul class="strip__badges">
+      <li><span class="badge">Accredited Tier Designer · Uptime Institute</span></li>
+      <li><span class="badge">Hauts-de-France &amp; Île-de-France</span></li>
     </ul>
   </div>
 </section>
@@ -224,24 +236,31 @@
 
 <style>
 /* ===== page-specific : Accueil ===== */
-.hero__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(40px,6vw,84px)}
-.hero__text .eyebrow{margin-bottom:26px}
-.hero__text h1{margin-bottom:26px;max-width:16ch}
-.hero__text .lead{margin-bottom:34px}
-.btn-row{margin-bottom:46px}
-.trust{list-style:none;display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
-.trust li{display:flex;flex-direction:column;gap:4px}
-.trust strong{font-size:16px;font-weight:700;color:var(--ink);line-height:1.2}
-.trust span{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--muted)}
-.hero__media{position:relative}
-.hero__img{aspect-ratio:4/4.6;width:100%}
-.hero__chip{position:absolute;left:-14px;bottom:26px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;max-width:74%;box-shadow:0 24px 50px -24px rgba(29,33,56,.4);display:flex;flex-direction:column;gap:8px}
-.hero__chip span:last-child{font-size:13.5px;color:var(--muted);line-height:1.45}
+.hero{padding-block:clamp(16px,2vw,28px)}
+.hero__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,4vw,56px);align-items:center;padding-top:clamp(12px,2vw,28px)}
+.hero__text .eyebrow{margin-bottom:14px}
+.hero__text h1.display{font-size:clamp(2.1rem,4.2vw,3.7rem);line-height:1;margin-bottom:14px;max-width:18ch}
+.hero__text .lead{font-size:clamp(1.05rem,1.35vw,1.25rem);margin-bottom:20px;max-width:54ch}
+.btn-row{margin-bottom:24px}
+.btn-row .btn{padding:14px 22px}
+
+.stats{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:14px 0 18px;align-items:start;border-bottom:1px solid var(--line);margin-bottom:18px}
+.stats li{display:flex;flex-direction:column;gap:3px;min-width:0}
+.stats__num{font-family:var(--sans);font-weight:800;font-stretch:115%;font-size:clamp(1.7rem,2.6vw,2.4rem);line-height:1;color:var(--indigo);letter-spacing:-.02em}
+.stats__num--text{font-size:clamp(.95rem,1.1vw,1.1rem);line-height:1.1;color:var(--ink);font-weight:700}
+.stats__label{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;margin-top:2px;line-height:1.25}
+
+.hero__media{position:relative;display:flex;flex-direction:column}
+.hero__img{aspect-ratio:4/3;width:100%}
+.hero__chip{position:absolute;left:-14px;bottom:20px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;max-width:74%;box-shadow:0 24px 50px -24px rgba(29,33,56,.4);display:flex;flex-direction:column;gap:6px}
+.hero__chip span:last-child{font-size:13px;color:var(--muted);line-height:1.45}
 
 .strip{border-block:1px solid var(--line);background:var(--paper-2)}
-.strip__in{display:flex;align-items:center;gap:28px;padding-block:22px;flex-wrap:wrap}
+.strip__in{display:flex;align-items:center;gap:20px 28px;padding-block:16px;flex-wrap:wrap}
 .strip__list{list-style:none;display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px;color:var(--ink)}
 .strip__list .sep{color:var(--lavender);font-weight:400}
+.strip__badges{list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto}
+.badge{display:inline-flex;align-items:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--indigo);background:#fff;border:1px solid var(--line-2);padding:6px 11px;border-radius:100px;text-transform:uppercase;font-weight:500}
 
 .sec-head{max-width:760px;margin-bottom:52px;display:flex;flex-direction:column;gap:18px}
 .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -287,8 +306,10 @@
   .cta__in{grid-template-columns:1fr;gap:28px}
 }
 @media (max-width:560px){
-  .trust{gap:24px}
+  .stats{grid-template-columns:repeat(2,1fr);gap:18px}
+  .stats li:last-child{grid-column:1 / -1}
   .hero__chip{left:0;max-width:88%}
+  .strip__badges{margin-left:0}
 }
 </style>
 
@@ -303,6 +324,29 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
     els.forEach(function(el){io.observe(el)});
   }else{els.forEach(function(el){el.classList.add('in')});}
+
+  // animated counters
+  var counters=document.querySelectorAll('.counter');
+  function animateCounter(el){
+    var target=parseInt(el.getAttribute('data-target'),10)||0;
+    var suffix=el.getAttribute('data-suffix')||'';
+    var duration=1600,start=performance.now();
+    function tick(now){
+      var p=Math.min((now-start)/duration,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased)+suffix;
+      if(p<1)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    counters.forEach(function(el){el.textContent=(parseInt(el.getAttribute('data-target'),10)||0)+(el.getAttribute('data-suffix')||'')});
+  }else if('IntersectionObserver' in window){
+    var ioC=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCounter(e.target);ioC.unobserve(e.target);}})},{threshold:.4});
+    counters.forEach(function(el){ioC.observe(el)});
+  }else{
+    counters.forEach(animateCounter);
+  }
 })();
 </script>
 </body>
