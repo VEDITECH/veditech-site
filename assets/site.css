@@ -162,6 +162,15 @@ p{text-wrap:pretty}
 .rule{height:1px;background:var(--line);border:0}
 .rule--dark{background:var(--line-dark)}
 
+/* ---------- clients strip ---------- */
+.clients{border-block:1px solid var(--line);background:var(--paper-2);padding-block:clamp(36px,5vw,56px)}
+.clients__head{text-align:center;margin-bottom:36px}
+.clients__head p{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.clients__grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(28px,4vw,56px)}
+.clients__item{display:flex;align-items:center;justify-content:center;filter:grayscale(1);opacity:.55;transition:.2s ease}
+.clients__item:hover{filter:grayscale(0);opacity:1}
+.clients__item img{height:36px;width:auto;max-width:120px;object-fit:contain}
+
 /* ---------- footer ---------- */
 .foot{background:var(--ink-navy);color:#c7c5dd;padding-block:64px 32px}
 .foot a{color:#c7c5dd}
